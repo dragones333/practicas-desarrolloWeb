@@ -1,0 +1,37 @@
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(211, 207, 203);
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.8547794117647058) 52%, rgba(0,212,255,1) 100%);
+}
+
+h1{
+    text-align: center;
+    margin-top: 50px;
+}
+#menu{
+    display: flex;
+    flex: wrap;
+    background-color: rgb(202, 72, 72);
+}
+.opcion{
+    background-color: rgb(228, 191, 44);
+    border: 1px solid rgb(148, 228, 124);
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    font-size: 14px;
+
+}
+
+.opcion:hover{
+    background-color: rgb(117, 127, 221);
+    font-size: 20px;
+    color: rgb(247, 188, 227);
+
+}

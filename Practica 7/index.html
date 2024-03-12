@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            animation: colores 10s infinite;
+        }
+
+        @keyframes colores {
+            0% {
+                background-color: red;
+            }
+            25% {
+                background-color: yellow;
+            }
+            50% {
+                background-color: green;
+            }
+            100% {
+                background-color: blue;
+            }
+        }
+
+        .cuadroBlanco {
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            position: fixed;
+            bottom: 100px;
+            animation: mueveCuadro 2s infinite;
+        }
+
+        .cuadroBlanco1 {
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            position: fixed;
+            left: 200px;
+            bottom: 100px;
+            animation: mover 2s infinite;
+        }
+
+        .cuadroBlanco2 {
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            position: fixed;
+            left: 350px;
+            bottom: 100px;
+            animation: moverMulticolor 4s infinite;
+        }
+
+        #cuadroRojo {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: fixed;
+            left: 500px;
+            bottom: 100px;
+            animation: mover 2s infinite;
+        }
+
+        #circulo {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            border-radius: 50%;
+            animation: crece 3s infinite;
+        }
+
+        @keyframes mover {
+            from {
+                top: 0px;
+            }
+            to {
+                top: 200px;
+            }
+        }
+
+        @keyframes moverMulticolor {
+            from {
+                background-color: red;
+            }
+            25% {
+                background-color: yellow;
+            }
+            50% {
+                background-color: green;
+            }
+            75% {
+                background-color: blue;
+            }
+            to {
+                background-color: red;
+            }
+        }
+
+        @keyframes mueveCuadro {
+            0% {
+                top: 0px;
+            }
+            50% {
+                top: 200px;
+            }
+            100% {
+                top: 0px;
+            }
+        }
+
+        @keyframes crece {
+            0% {
+                width: 100px;
+                height: 100px;
+            }
+            100% {
+                width: 1000px;
+                height: 1000px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="cuadroBlanco" class="cuadroBlanco"></div>
+    <div id="cuadroBlanco1" class="cuadroBlanco1"></div>
+    <div id="cuadroBlanco2" class="cuadroBlanco2"></div>
+    <div id="cuadroRojo" class="cuadroBlanco"></div>
+    <div id="circulo" class="cuadroBlanco"></div>
+    <h1 data-aos="flip-down-right">Hola esto es un texto animado</h1>
+</body>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</html>
