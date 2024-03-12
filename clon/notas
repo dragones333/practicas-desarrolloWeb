@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <link rel="stylesheet" href="estilo.css">
+
+
 </head>
 <body>
     <div class="container-fluid">
@@ -18,7 +21,6 @@
                 <nav class="navbar navbar-expand-lg bg-body-tertiary">
                     <div class="container-fluid">
                         <img src="" alt="LogoNike">
-                        <img style="width: 50px; height: 50px;" src="data:image/png;base64,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" alt="LogoNike">
                       <a class="navbar-brand" href="#">Nike</a><i class="bi bi-universal-access"></i>
 
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,17 +60,6 @@
         </div>
     </div>
 
-    <!-- Primer cuadro gris claro con opciones -->
-    <div class="cuadro-gris-con-opciones">
-        <p></p>
-    </div>
-
-    <!-- Segundo cuadro blanco -->
-    <div class="cuadro-blanco"></div>
-
-    <!-- Tercer cuadro gris sin opciones -->
-    <div class="cuadro-gris-sin-opciones"></div>
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
@@ -100,6 +91,10 @@
         <div class="row">
             
         </div>
+    </div>
+
+
+
     </div>
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

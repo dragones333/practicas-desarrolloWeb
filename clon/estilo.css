@@ -1,3 +1,19 @@
 body{
     font-family: 'Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue'
 }
+/* Estilo para el primer cuadro gris claro con opciones */
+.cuadro-gris-con-opciones {
+    background-color: lightgray;
+    height: 200px; /* Ajusta la altura según sea necesario */
+    width: 100%; /* Abarca todo el ancho de la página */
+  }
+  
+  /* Estilo para el segundo cuadro blanco */
+  .cuadro-blanco {
+    background-color: white;
+    height: 300px; /* Ajusta la altura según sea necesario */
+    width: 100%; /* Abarca todo el ancho de la página */
+  }
+  
+  /* Estilo para el tercer
+  
