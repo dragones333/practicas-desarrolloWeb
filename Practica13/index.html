@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <h1>Practica 13</h1>
+    <p id="nombreCompleto">Este es un parrafo</p>
+    <script>
+        var edad=25;
+        console.log(edad);
+
+        function muestraEdad(miEdad){
+            edad=miEdad+10;
+            return edad;
+        }//scope
+        console.log(muestraEdad());
+        console.log("Edad:",edad)
+
+        const PI=3.1416; //constante, number, float
+        function areaCirculo(radio){
+            return PI*radio*radio;
+        }
+
+        let area = areaCirculo(5);
+        console.log("el area del circulo es:"+area);
+
+        function saludar(){
+            //let nombre ="Juan"; //string
+            return "Hola" + nombre;
+        }
+        //camelCase - nuevoNombre
+        //pascallCase - NuevoNombre
+        //snake_case - nuevo_nombre
+        //kebab-case - nuevo-nombre No Permitido en JS
+
+        let nuevoNombre = "Diego";
+
+        console.log(saludar(nuevoNombre));
+
+        let estado= true;//boolean
+        let otroEstado=false //boolean
+        let arreglo = [1,2,3,4,5]; //array
+        let arreglo2 = ["Python","Java","JS"]; //array
+        let arreglo3 = [1,"Python",true]; //array
+
+        let arregloBooleanos = [true,false,true,false,true]; //array
+
+        console.log(estado);
+        console.log(arreglo(2));
+        console.log(arreglo(5));
+        console.log(arreglo(-2));
+
+        let nulo=null; //null
+        console.log("resultado de nulo"+null);
+        
+        let nombre = "Tony"; //string
+        let apellido = "Stark"; //string
+        let nombreCompleto= nombre+" "+apellido;//string
+        console.log(nombreCompleto);
+        
+        let nombreEnPantalla= document.getElementById("nombreCompleto");
+        nombreEnPantalla.innerHTML = nombreCompleto;
+
+
+        /*
+        let miVariable=10; //number, integer
+        miVariable=20; //number, integer
+        let numero=15; //number, integer
+        let texto="Hola mundo"; //string
+        console.log(miVariable,numero);
+        console.log(texto);
+        console.log("Resultado en consola:" + miVariable)*/
+
+    </script>
+    
+</body>
+</html>
