@@ -1,0 +1,28 @@
+
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+        background-image:  src="ima" alt="Imagen 1";
+        background-size: cover; 
+        background-position: center; 
+        
+    
+}
+
+header, nav, section, article, footer {
+    margin: 20px;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
