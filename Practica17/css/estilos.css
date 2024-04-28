@@ -1,3 +1,5 @@
-img{
+.pelicula-imagen {
     width: 150px;
+    margin: auto; 
+    display: block; 
 }
