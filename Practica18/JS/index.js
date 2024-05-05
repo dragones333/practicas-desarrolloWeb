@@ -80,6 +80,6 @@ lista.innerHTML = cadenaHTML;
 x=3.14;//this will not cause an error
 otrafuncion();
 function otrafuncion() {
-    "use strict"
+"use strict"
 y=3.14; //this will not cause an error
 }
