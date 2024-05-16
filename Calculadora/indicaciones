@@ -1,0 +1,11 @@
+
+Desarrollar una calculadora de expresiones algebraicas que permita a los usuarios ingresar
+ expresiones algebraicas complejas y obtener el resultado de 
+la evaluación de dichas expresiones. La calculadora deberá ser capaz de manejar variables, 
+constantes, operadores algebraicos básicos 
+(+, -, *, /), paréntesis y potencia
+
+A tomar en cuenta:
+Una interfaz de usuario simple que permita al usuario ingresar la expresión algebraica.
+Utilizar pilas y listas para organizar y manipular los componentes de la expresión.
+Implementar un algoritmo que utilice las reglas del álgebra para evaluar la expresión correctamente.
