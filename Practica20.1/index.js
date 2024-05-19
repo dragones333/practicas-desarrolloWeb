@@ -1,30 +1,44 @@
-let historial = [];
+let resultado = document.getElementById('resultado');
+let historial = document.getElementById('historial-operaciones');
 
-function asignar(valor) {
-    document.getElementById("resultado").value += valor;
-}
+let asignar = (valor) => {
+    if (valor === 'C') {
+        limpiar();
+    } else {
+        resultado.value += valor;
+    }
+};
 
 function calcular() {
-    let expresion = document.getElementById("resultado").value;
-    let resultado;
     try {
-        resultado = eval(expresion);
-        if (isNaN(resultado) || !isFinite(resultado)) {
-            throw new Error('Expresión inválida');
-        }
-        document.getElementById("resultado").value = resultado;
-        historial.push(expresion + " = " + resultado);
-        mostrarHistorial();
-    } catch (error) {
-        alert('Error: ' + error.message);
+        let expresion = resultado.value.replace('^', '**').replace(/√/g, 'Math.sqrt').replace(/!/g, 'factorial');
+        
+        let resultadoOperacion = eval(expresion);
+        
+        agregarHistorial(`${resultado.value} = ${resultadoOperacion}`);
+        resultado.value = resultadoOperacion;
+    } catch (e) {
+        alert('Expresión inválida');
+        limpiar();
     }
 }
 
-function mostrarHistorial() {
-    let historialHTML = "<h2>Historial de Operaciones:</h2><ul>";
-    historial.forEach(op => {
-        historialHTML += "<li>" + op + "</li>";
-    });
-    historialHTML += "</ul>";
-    document.getElementById("historial").innerHTML = historialHTML;
+function limpiar() {
+    resultado.value = '';
+}
+
+function agregarHistorial(operacion) {
+    let nuevaOperacion = document.createElement('li');
+    nuevaOperacion.className = 'dropdown-item';
+    nuevaOperacion.textContent = operacion;
+    historial.appendChild(nuevaOperacion);
+}
+function factorial(n) {
+    if (n < 0) return NaN;
+    if (n === 0 || n === 1) return 1;
+    let resultado = 1;
+    for (let i = 2; i <= n; i++) {
+        resultado *= i;
+    }
+    return resultado;
 }

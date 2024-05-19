@@ -38,7 +38,7 @@ formulario.addEventListener("submit", (e) => {
     agregarDatos();
     cerrarModal();
     mostrarTareas();
-    resetearFormulario();
+    formulario.reset();
     
 });
 
@@ -90,13 +90,28 @@ let mostrarTareas = () => {
                 <strong>${tarea.descripcion}</strong>
             </div>
             <div class="col-12 col-md-3 border p-3">
-                <button><i class="bi bi-pencil"></i>&nbsp; Editar</button>
-                <button class="btn btn-danger"><i class="bi bi-trash"></i>&nbsp; Borrar</button>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="editarModal"><i class="bi bi-pencil"></i>&nbsp; Editar</button>
+                <button class="btn btn-danger" onClick= "borrarTarea(this,${indice})"><i class="bi bi-trash"></i>&nbsp; Borrar</button>
 
             </div>
         `;
         listaTareas.appendChild(tareaElemento);
     });
 };
+ 
+let borrarTarea=(boton,indice)=>
+{console.log(tareas);
+    if (confirm("estas seguro de borrarlo?")){
+        if (confirm("realmente seguro de lanzar la bomba?")){
+            boton.parentElement.parentElement.remove(boton);
+            tareas.splice(indice,1);
+boton.parentElement.parentElement.remove(boton);
+tareas.splice(indice,1);
+}
+else {
+    alert("salvaste al mundo de la destruccion")
+}
+    }
+}
 
 mostrarTareas();
