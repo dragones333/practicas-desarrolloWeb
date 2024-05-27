@@ -8,24 +8,17 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.toggle('dark-mode');
 
         if (clickCount === 10) {
-            showFullscreenVideo('shinGod.mp4');
+            // Crear un iframe para incrustar el video de YouTube
+            const iframe = document.createElement('iframe');
+            iframe.src = 'https://www.youtube.com/embed/uZLppeRr8V0?autoplay=1';
+            iframe.allowFullscreen = true;
+            iframe.style.position = 'fixed';
+            iframe.style.top = '0';
+            iframe.style.left = '0';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.border = 'none';
+            document.body.appendChild(iframe);
         }
     });
 });
-
-function showFullscreenVideo(videoUrl) {
-    const videoContainer = document.createElement('div');
-    videoContainer.classList.add('fullscreen-video');
-    
-    const videoElement = document.createElement('video');
-    videoElement.src = videoUrl;
-    videoElement.autoplay = true;
-    videoElement.controls = true;
-    
-    videoContainer.appendChild(videoElement);
-    document.body.appendChild(videoContainer);
-
-    videoElement.addEventListener('ended', () => {
-        document.body.removeChild(videoContainer);
-    });
-}
